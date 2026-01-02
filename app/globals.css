@@ -1,26 +1,94 @@
 @import "tailwindcss";
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* fonts */
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-ExtraLight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ownglyph PDH";
+  src: url("/fonts/온글잎 박다현체.ttf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-ownglyph {
+  font-family: "Ownglyph PDH", sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Pretendard";
+  /* 드래그 방지 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@theme {
+  --color-base-white: #ffffff;
+  --color-base-gray: #dddddd;
+  --color-base-black: #000000;
+  --color-point-blue: #366cef;
 }
